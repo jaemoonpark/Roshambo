@@ -14,6 +14,8 @@
 		A0DD8A5B1D385D9D006EC44A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A0DD8A591D385D9D006EC44A /* LaunchScreen.storyboard */; };
 		A0DD8A661D385D9D006EC44A /* RoshamboTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0DD8A651D385D9D006EC44A /* RoshamboTests.swift */; };
 		A0DD8A711D385D9D006EC44A /* RoshamboUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0DD8A701D385D9D006EC44A /* RoshamboUITests.swift */; };
+		A0DD8A7F1D386743006EC44A /* ChoiceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0DD8A7E1D386743006EC44A /* ChoiceViewController.swift */; };
+		A0DD8A811D386765006EC44A /* ResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0DD8A801D386765006EC44A /* ResultsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +49,8 @@
 		A0DD8A6C1D385D9D006EC44A /* RoshamboUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RoshamboUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A0DD8A701D385D9D006EC44A /* RoshamboUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoshamboUITests.swift; sourceTree = "<group>"; };
 		A0DD8A721D385D9D006EC44A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A0DD8A7E1D386743006EC44A /* ChoiceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChoiceViewController.swift; sourceTree = "<group>"; };
+		A0DD8A801D386765006EC44A /* ResultsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,10 +103,12 @@
 			children = (
 				A0DD8A501D385D9D006EC44A /* AppDelegate.swift */,
 				A0DD8A521D385D9D006EC44A /* ViewController.swift */,
+				A0DD8A801D386765006EC44A /* ResultsViewController.swift */,
 				A0DD8A541D385D9D006EC44A /* Main.storyboard */,
 				A0DD8A571D385D9D006EC44A /* Assets.xcassets */,
 				A0DD8A591D385D9D006EC44A /* LaunchScreen.storyboard */,
 				A0DD8A5C1D385D9D006EC44A /* Info.plist */,
+				A0DD8A7E1D386743006EC44A /* ChoiceViewController.swift */,
 			);
 			path = Roshambo;
 			sourceTree = "<group>";
@@ -256,8 +262,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A0DD8A7F1D386743006EC44A /* ChoiceViewController.swift in Sources */,
 				A0DD8A531D385D9D006EC44A /* ViewController.swift in Sources */,
 				A0DD8A511D385D9D006EC44A /* AppDelegate.swift in Sources */,
+				A0DD8A811D386765006EC44A /* ResultsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -482,6 +490,7 @@
 				A0DD8A771D385D9D006EC44A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A0DD8A781D385D9D006EC44A /* Build configuration list for PBXNativeTarget "RoshamboTests" */ = {
 			isa = XCConfigurationList;
@@ -490,6 +499,7 @@
 				A0DD8A7A1D385D9D006EC44A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A0DD8A7B1D385D9D006EC44A /* Build configuration list for PBXNativeTarget "RoshamboUITests" */ = {
 			isa = XCConfigurationList;
@@ -498,6 +508,7 @@
 				A0DD8A7D1D385D9D006EC44A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

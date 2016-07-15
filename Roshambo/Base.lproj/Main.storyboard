@@ -18,7 +18,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6KG-pd-vSJ">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6KG-pd-vSJ">
                                 <rect key="frame" x="170" y="435" width="75" height="65"/>
                                 <state key="normal" image="scissors"/>
                             </button>
@@ -54,10 +54,10 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
         </scene>
-        <!--View Controller-->
+        <!--Results View Controller-->
         <scene sceneID="8Af-yH-8Qa">
             <objects>
-                <viewController id="Q6z-sq-1Ao" sceneMemberID="viewController">
+                <viewController id="Q6z-sq-1Ao" customClass="ResultsViewController" customModule="Roshambo" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="7jI-sO-LrA"/>
                         <viewControllerLayoutGuide type="bottom" id="nIl-wl-WkY"/>
@@ -93,6 +93,10 @@
                         </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+                    <connections>
+                        <outlet property="resultImage" destination="bRe-Zd-FMP" id="w1Z-1c-cGV"/>
+                        <outlet property="resultText" destination="XcM-Xx-VXo" id="3gn-OI-BeD"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="p34-3B-SDO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
