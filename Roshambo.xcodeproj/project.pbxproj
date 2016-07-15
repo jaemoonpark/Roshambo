@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		A0DD8A511D385D9D006EC44A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0DD8A501D385D9D006EC44A /* AppDelegate.swift */; };
-		A0DD8A531D385D9D006EC44A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0DD8A521D385D9D006EC44A /* ViewController.swift */; };
 		A0DD8A561D385D9D006EC44A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A0DD8A541D385D9D006EC44A /* Main.storyboard */; };
 		A0DD8A581D385D9D006EC44A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A0DD8A571D385D9D006EC44A /* Assets.xcassets */; };
 		A0DD8A5B1D385D9D006EC44A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A0DD8A591D385D9D006EC44A /* LaunchScreen.storyboard */; };
@@ -38,7 +37,6 @@
 /* Begin PBXFileReference section */
 		A0DD8A4D1D385D9D006EC44A /* Roshambo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Roshambo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A0DD8A501D385D9D006EC44A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		A0DD8A521D385D9D006EC44A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		A0DD8A551D385D9D006EC44A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A0DD8A571D385D9D006EC44A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A0DD8A5A1D385D9D006EC44A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -102,7 +100,6 @@
 			isa = PBXGroup;
 			children = (
 				A0DD8A501D385D9D006EC44A /* AppDelegate.swift */,
-				A0DD8A521D385D9D006EC44A /* ViewController.swift */,
 				A0DD8A801D386765006EC44A /* ResultsViewController.swift */,
 				A0DD8A541D385D9D006EC44A /* Main.storyboard */,
 				A0DD8A571D385D9D006EC44A /* Assets.xcassets */,
@@ -199,6 +196,7 @@
 				TargetAttributes = {
 					A0DD8A4C1D385D9D006EC44A = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = D7WG485B62;
 					};
 					A0DD8A601D385D9D006EC44A = {
 						CreatedOnToolsVersion = 7.3.1;
@@ -263,7 +261,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				A0DD8A7F1D386743006EC44A /* ChoiceViewController.swift in Sources */,
-				A0DD8A531D385D9D006EC44A /* ViewController.swift in Sources */,
 				A0DD8A511D385D9D006EC44A /* AppDelegate.swift in Sources */,
 				A0DD8A811D386765006EC44A /* ResultsViewController.swift in Sources */,
 			);
@@ -407,10 +404,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Roshambo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.jaemoonpark.Roshambo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -418,10 +418,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Roshambo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.jaemoonpark.Roshambo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};

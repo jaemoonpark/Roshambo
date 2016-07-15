@@ -6,10 +6,10 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Choice View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Roshambo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ChoiceViewController" customModule="Roshambo" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -18,17 +18,26 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6KG-pd-vSJ">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6KG-pd-vSJ">
                                 <rect key="frame" x="170" y="435" width="75" height="65"/>
                                 <state key="normal" image="scissors"/>
+                                <connections>
+                                    <segue destination="Q6z-sq-1Ao" kind="modal" id="zZe-Ur-Q8v"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ig2-Eo-fou">
                                 <rect key="frame" x="170" y="235" width="75" height="65"/>
                                 <state key="normal" image="rock"/>
+                                <connections>
+                                    <action selector="choseRock" destination="BYZ-38-t0r" eventType="touchUpInside" id="rg8-qL-EgJ"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PPd-2H-Rlp">
                                 <rect key="frame" x="170" y="335" width="75" height="65"/>
                                 <state key="normal" image="paper"/>
+                                <connections>
+                                    <action selector="chosePaper" destination="BYZ-38-t0r" eventType="touchUpInside" id="igy-7m-RLG"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select a button to play!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V4p-XZ-DBA">
                                 <rect key="frame" x="119" y="577" width="177" height="21"/>
@@ -50,6 +59,9 @@
                         </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+                    <connections>
+                        <segue destination="Q6z-sq-1Ao" kind="modal" identifier="seguePaper" id="6YZ-vw-s5A"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -57,7 +69,7 @@
         <!--Results View Controller-->
         <scene sceneID="8Af-yH-8Qa">
             <objects>
-                <viewController id="Q6z-sq-1Ao" customClass="ResultsViewController" customModule="Roshambo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ResultsViewController" id="Q6z-sq-1Ao" customClass="ResultsViewController" customModule="Roshambo" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="7jI-sO-LrA"/>
                         <viewControllerLayoutGuide type="bottom" id="nIl-wl-WkY"/>
@@ -66,24 +78,27 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bRe-Zd-FMP">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bRe-Zd-FMP">
                                 <rect key="frame" x="87" y="304" width="240" height="128"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XcM-Xx-VXo">
-                                <rect key="frame" x="186" y="488" width="42" height="21"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sBc-qe-f8w">
+                                <rect key="frame" x="184" y="599" width="46" height="30"/>
+                                <state key="normal" title="Return"/>
+                                <connections>
+                                    <action selector="replay" destination="Q6z-sq-1Ao" eventType="touchUpInside" id="J64-LJ-Csu"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="redraw" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XcM-Xx-VXo">
+                                <rect key="frame" x="87" y="488" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sBc-qe-f8w">
-                                <rect key="frame" x="184" y="599" width="46" height="30"/>
-                                <state key="normal" title="Return"/>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="sBc-qe-f8w" firstAttribute="centerY" secondItem="cwu-Dp-8XZ" secondAttribute="centerY" constant="246" id="4zL-2r-rAp"/>
-                            <constraint firstItem="XcM-Xx-VXo" firstAttribute="leading" secondItem="cwu-Dp-8XZ" secondAttribute="leadingMargin" constant="166" id="Bc4-Lj-rZP"/>
+                            <constraint firstItem="XcM-Xx-VXo" firstAttribute="leading" secondItem="cwu-Dp-8XZ" secondAttribute="leadingMargin" constant="67" id="Bc4-Lj-rZP"/>
                             <constraint firstItem="bRe-Zd-FMP" firstAttribute="centerY" secondItem="cwu-Dp-8XZ" secondAttribute="centerY" id="DwJ-cf-hkt"/>
                             <constraint firstItem="bRe-Zd-FMP" firstAttribute="centerX" secondItem="cwu-Dp-8XZ" secondAttribute="centerX" id="MZB-Y2-8OF"/>
                             <constraint firstItem="sBc-qe-f8w" firstAttribute="centerX" secondItem="cwu-Dp-8XZ" secondAttribute="centerX" id="P2B-Hq-mDR"/>
@@ -100,7 +115,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="p34-3B-SDO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="868" y="372"/>
+            <point key="canvasLocation" x="734" y="393"/>
         </scene>
     </scenes>
     <resources>
@@ -108,4 +123,7 @@
         <image name="rock" width="75" height="65"/>
         <image name="scissors" width="75" height="65"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="zZe-Ur-Q8v"/>
+    </inferredMetricsTieBreakers>
 </document>

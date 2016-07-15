@@ -39,8 +39,8 @@ class ResultsViewController: UIViewController {
                 self.resultText.text = "You lose! Scissor beats paper!"
                 self.resultImage.image = UIImage(named: "ScissorsCutPaper")
             default:
-                self.resultText.text = "An error took place. Please reload the app."
-                self.resultImage.image = nil
+                self.resultText.text = "It's a tie! Wooboo :) :("
+                self.resultImage.image = UIImage(named: "itsATie")
                 
             }
         }
@@ -54,6 +54,7 @@ class ResultsViewController: UIViewController {
     @IBAction func replay(){
         self.dismissViewControllerAnimated(true, completion: nil)
     }
+    
     
     
 }
